@@ -6,11 +6,6 @@ cls.exports(
 {
     $name:"root.Origin",
     $extends:"Object",
-    $defaultConfig:{
-        temp:{
-            sampleConf:10,
-        }
-    },
     $define:
     /** @lends cm.BaseObejct.prototype */
     {
