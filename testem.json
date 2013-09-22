@@ -1,0 +1,9 @@
+{
+	"framework" : "jasmine",
+	"src_files" : [
+		"lib/jsml.js",
+		"src/config.js",
+		"src/jscls.js",
+		"tests/*.js"
+	]
+}

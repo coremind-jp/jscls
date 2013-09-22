@@ -4,7 +4,7 @@
  * @author otn83 nakahara@coremind.jp
  * @license http://en.wikipedia.org/wiki/MIT_License
  */
-(function(g)
+;(function(g)
 {
     g.IS_NODE = this.window === undefined;
     /*@cc_on
@@ -19,6 +19,8 @@
             Array.prototype.indexOf = indexOf;
     @*/
     var config = g._conf_ || { enabledLog:true };
+    var jsml   = g.jsml;
+    dump(jsml);
 
     var dType = {
         S:"string",
@@ -190,7 +192,7 @@
         if (!isFunction(classDefine.$define.destroy))
             logE(_name, "method[destroy] is undefined.");
         if (isUndefined(classDefine.$extends))
-            classDefine.$extends = "root.Origin";
+            classDefine.$extends = "cls.Origin";
         else
         if (!isString(classDefine.$extends))
             logE("$extends is not String. " + classDefine.$extends);
@@ -697,9 +699,9 @@
          */
         typeOf:typeOf
     };
-})(global || window);
+})(this.global || this.window);
 /**
- * クラスを作成するためのメソッドが格納されています.
+ * クラスを作成するためのメソッドと基底クラスが格納されています.
  * @namespace
  */
 var cls;
@@ -712,7 +714,7 @@ var out;
  * Build-Inオブジェクトのユーティリティ関数が格納されています.
  * @namespace
  */
-var ex = {};
+var ex;
 /**
  * 型評価、等価評価関数が格納されています.
  * @namespace
