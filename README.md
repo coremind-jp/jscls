@@ -1,7 +1,7 @@
 
 # [jscls](https://github.com/otn83)
 
-## 概要
+## About
 
 jsclsはブラウザ、nodejs上で動作するOOPフレームワークです。
 
@@ -13,14 +13,15 @@ jsclsはブラウザ、nodejs上で動作するOOPフレームワークです。
 * Safari
 * InternetExplorer 6+
 
-## 依存ライブラリ
+## Dependence
 
 [jsml](https://github.com/otn83/jsml "jsml")
 
 ## Documentation
 
 [Reference](http://coremind.jp/devDocs/jscls/ "Reference")
-[guid](https://github.com/otn83/jscls/blob/master/howtouse.md "guid")
+
+[Guid](https://github.com/otn83/jscls/blob/master/howtouse.md "guid")
 
 ## Authors
 
