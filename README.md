@@ -1,56 +1,26 @@
 
-# [CoremindJS v0.9.0](https://github.com/otn83)
+# [jscls](https://github.com/otn83)
 
 ## 概要
 
-CoremindJSはJavaScriptをよりOOPらしく記述するためのライブラリです。
-このライブラリは中規模以上のアプリケーション開発を行う際にコードの可読性と堅牢性を高める目的で開発しています。
-具体的には以下のような機能をサポートします。
+jsclsはブラウザ、nodejs上で動作するOOPフレームワークです。
 
-* prototypeチェインを使用した煩わしいクラス定義を簡潔に記述できるようになります。
-* extendsやimportを明示的に定義するため、ソース（クラス）ファイル間の関連性が把握しやすくなります。
-* 新規作成したクラスに必要なソース（クラス）ファイルを動的にロード、パッケージングできます。(パッケージドメインも柔軟に変更可能)
-* ソースファイルの結合処理にも対応しているので必要最小限のソースのみ結合させる事ができ本番環境ではコンパクトな形にまとめることができます。
+サポートしているブラウザ
 
-## 導入方法
+* Chrome
+* Firefox
+* Opera
+* Safari
+* InternetExplorer 6+
 
-特に混みいった事情が無ければ[masterブランチ](https://github.com/otn83/CoremindJS/archive/master.zip)からダウンロードしたファイル一式をお使いのサーバーへアップロードするだけで使用することができます。
+## 依存ライブラリ
 
-しかしcoremindパッケージのルートディレクトリとmanifest.jsの配置先が異なる様な場合はmanifest.jsを編集する必要があります。manifest.js内のデフォルト設定はcoremindパッケージのルートディレクトリはmanifest.jsと同階層にある前提で設定されているためです。
-[see:manifest.js](https://github.com/otn83/CoremindJS/wiki/manifest.js)
+[jsml](https://github.com/otn83/jsml "jsml")
 
-アップロードを済ませたら組み込みたいHTMLページにmanifest.jsとcoremind.js、それとアプリケーションのメインコードを用意します。例えばこんな具合です。
+## Documentation
 
-```HTML
-script type="text/javascript" src="http://your_server.com/js/manifest.js"
-script type="text/javascript" src="http://your_server.com/js/coremind.js"
-script type="text/javascript" src="http://your_server.com/js/your_application_maincode.js"
-```
-
-スクリプトタグの挿入位置はheaderでもbodyでも構いません。
-
-しかし読み込む順序には次の通りにする必要があります。
-1. manifest.js
-2. coremind.js
-3. your_application_maincode.js
-
-## 使用方法
-
-[see:how to use]()
-
-## ブランチについて
-
-CoremindJSは3つのブランチによってコードを管理しています。
-各ブランチの位置づけは次の表の通りです。prototypeではmasterに無い様々な機能が盛り込まれていますが、
-ドキュメントの整備と単体テストが後回しになっているためmaster, betaには含まれていません。
-
-興味の湧いた方は是非覗いてみてください。アドバイスも歓迎です。:D
-
-|ブランチ名| 単体テスト | ドキュメント | IF確度 
-|:-----------|:-:|:-:|:-:|
-| master     | ◎| ◯| ◎|
-| beta       | ◯| ☓| △|
-| prototype  | △| ☓| ☓|
+[Reference](http://coremind.jp/devDocs/jscls/ "Reference")
+[guid](https://github.com/otn83/jscls/blob/master/howtouse.md "guid")
 
 ## Authors
 
