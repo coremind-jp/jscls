@@ -1,3 +1,4 @@
+
 /**
  * @fileOverview
  * @url https://github.com/otn83/jscls
@@ -454,7 +455,6 @@
     }
 //class--------------end
     
-//apply config setting
     if (!config.enabledLog)
         log = logD = logW = logE = log$ = dump = function(){};
 
@@ -462,21 +462,23 @@
         for (var p in config.jsmlAlias)
             jsml.setAlias(config.jsmlAlias[p], p);
 
-//set global member
-    w.cls = {
+    w.cls = /** @lends cls */{
         exports:exports,
         require:require,
         get:get,
         config:config
     };
-    w.out = {
+    w.out = /** @lends out */{
         p:log,
         d:logD,
         w:logW,
         e:logE,
         $:log$//develope
     };
-    w.ex = {
+    w.ex = /** @lends ex */{
+        /**
+         * Objectユーティリティパッケージ
+         */
         object:{
             dump:dump,
             clone:clone,
@@ -487,16 +489,76 @@
             capitalize:capitalize
         }
     };
-    w.eq = {
+    w.eq = /** @lends eq */{
+        /**
+         * valがBoolean型かを示す値を返します.
+         * @function
+         * @param  {Object}  val 任意のデータ
+         * @return {Boolean} Booleanの場合true, それ以外の場合false
+         */
         isBoolean:isBoolean,
+        /**
+         * valがNumber型かを示す値を返します.
+         * @function
+         * @param  {Object}  val 任意のデータ
+         * @return {Boolean} Numberの場合true, それ以外の場合false
+         */
         isNumber:isNumber,
+        /**
+         * valがString型かを示す値を返します.
+         * @function
+         * @param  {Object}  val 任意のデータ
+         * @return {Boolean} Stringの場合true, それ以外の場合false
+         */
         isString:isString,
+        /**
+         * valがArray型かを示す値を返します.
+         * @function
+         * @param  {Object}  val 任意のデータ
+         * @return {Boolean} Arrayの場合true, それ以外の場合false
+         */
         isArray:isArray,
+        /**
+         * valがFunction型かを示す値を返します.
+         * @function
+         * @param  {Object}  val 任意のデータ
+         * @return {Boolean} Functionの場合true, それ以外の場合false
+         */
         isFunction:isFunction,
+        /**
+         * valがObject型かを示す値を返します.
+         * @function
+         * @param  {Object}  val 任意のデータ
+         * @return {Boolean} Objectの場合true, それ以外の場合false
+         */
         isObject:isObject,
+        /**
+         * valがnullかを示す値を返します.
+         * @function
+         * @param  {Object}  val 任意のデータ
+         * @return {Boolean} nullの場合true, それ以外の場合false
+         */
         isNull:isNull,
+        /**
+         * valがundefinedかを示す値を返します.
+         * @function
+         * @param  {Object}  val 任意のデータ
+         * @return {Boolean} undefinedの場合true, それ以外の場合false
+         */
         isUndefined:isUndefined,
+        /**
+         * valがHTML DOM型かを示す値を返します.
+         * @function
+         * @param  {Object}  val 任意のデータ
+         * @return {Boolean} HTML DOMの場合true, それ以外の場合false
+         */
         isDomElement:isDomElement,
+        /**
+         * valの型を返します.
+         * @function
+         * @param  {Object} val 任意のデータ
+         * @return {String} null, undefined, string, number, boolean, function, object, arrayのいずれか
+         */
         typeOf:typeOf
     };
 
@@ -509,3 +571,11 @@
         Array.prototype.indexOf = indexOf;
 @*/
 })(window);
+/** @namespace */
+var cls;
+/** @namespace */
+var out;
+/** @namespace */
+var ex;
+/** @namespace */
+var qe;
